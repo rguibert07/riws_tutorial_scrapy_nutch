@@ -1,13 +1,10 @@
-# Define here the models for your scraped items
-#
-# See documentation in:
-# https://docs.scrapy.org/en/latest/topics/items.html
+import scrapy
 
-from dataclasses import dataclass
-
-
-@dataclass
-class RecolectorItem:
-    # define the fields for your item here like:
-    # name: str | None = None
-    pass
+class RecursoItem(scrapy.Item):
+    id = scrapy.Field()
+    titulo = scrapy.Field()
+    texto = scrapy.Field()
+    autor = scrapy.Field()
+    categorias = scrapy.Field()
+    url = scrapy.Field()
+    fuente = scrapy.Field()
